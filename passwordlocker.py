@@ -19,4 +19,4 @@ class User:
          '''   
          User.user_list.append(self)  
     @classmethod
-    def user_exist()    
+    def user_exist(cls,name)    
