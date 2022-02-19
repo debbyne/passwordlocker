@@ -18,5 +18,10 @@ class User:
         this method adds a new user to the user list
          '''   
          User.user_list.append(self)  
+
     @classmethod
-    def user_exist(cls,name)    
+    def user_exist(cls,name):
+        for user in cls.user_list:
+            
+         if User.user_name ==user_name and User.pass_word == pass_word:
+            return True
