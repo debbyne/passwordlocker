@@ -1,6 +1,5 @@
-from click import password_option
-
-
+import unittest
+from passwordlocker import User
 class  Credentials:
     '''
     class that generates new instances of credentials
@@ -45,4 +44,16 @@ class  Credentials:
        length = 4
        return pass_word
        print(pass_word)
+    @classmethod
+    def log_in(cls,name,password):
+        '''
+        this method enables users to log into their acccounts
+        '''
+        for user in cls.user_list:
+            if User.user_name ==name and User.pass_word ==password:
+                return Credentials.credentials_list
+    def delete_credentials(self):
+        '''
+        this method deletes saved credentials from accounts
+        '''
 

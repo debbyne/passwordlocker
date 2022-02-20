@@ -1,5 +1,6 @@
 import unittest
 from credentials import Credentials
+from passwordlocker import User
 
 class TestCredentials(unittest.TestCase):
     '''
@@ -26,8 +27,17 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_credential.account, "instagram")
         self.assertEqual(self.new_credentials.user_name, "Devian")
         self.assertEqual(self.new_credentials.pass_word, "1234")
-    def delete_credentials(self):
+    
+    def test_log_in(self):
         '''
-        this method deletes saved credentials from accounts
+        this test checks whether user can login into accounts using their credentials
         '''
-        
+        self.new_user.save_user()
+
+        test_user = User("Devian",)
+
+        test_user.save_user()
+
+        found_credentials = User.log_in("Devian",)
+
+        self.assertEqual(found_credentials, Credentials.credentials_list) 

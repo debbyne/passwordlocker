@@ -4,24 +4,32 @@ def main():
     '''
     method that controls the passwordlocker
     '''
-    print("Hello Welcome to passwordlocker.")
+    print("WELCOME TO PASSWORD LOCKER.")
     
 
-    print(f"Hello you have two options")
+    print(f"you have two options")
 
     while True:
-                print(
-                    '''
+                print( 
                 1.Create a new account
                 2.Login to your existing account
-                ''' )
+                 )
                 number = input()
                 if number == "1":
                     '''
                     Create a new account
                     '''
-                    print("Enter user_name...")
+                    print("Enter username...")
                     user_name = input()
-                    print()
+                    print(
+                    1.Create your own password
+                    2.Generate password
+                    )
+                    number = input()
+                    if number =="1":
+                        print("Enter password...")   
+                    elif number == "2":
+
+
 
                 
