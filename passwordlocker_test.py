@@ -15,8 +15,8 @@ class TestUser(unittest.TestCase):
     def tearDown(self):
         '''
         tearDown cleans up after each test case is run
-        User.user_list = []
         '''
+         User.user_list = []
     def test_init(self):
         '''
         test_init test case to test if the object is initialized properly
