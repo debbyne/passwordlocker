@@ -61,11 +61,10 @@ def main():
     print(f"you have two options")
 
     while True:
-                print(
-                    '''
+                print('''
                 1.Create a new account
                 2.Login to your existing account
-                ''' )
+                ''')
                 number = input()
                 if number == "1":
                     '''
@@ -73,11 +72,10 @@ def main():
                     '''
                     print("Enter username of choice...")
                     user_name = input()
-                    print(
-                        '''
+                    print("""
                     1.Create your own password
                     2.Generate password
-                    ''' )
+                    """ )
                     number = input()
                     if number =="1":
                         print("Enter password...")   
@@ -98,13 +96,13 @@ def main():
                         '''
                         After logging in
                         '''
-                        print("
+                        print('''
                                1.Create a new credential
                                2.Use generated credential
                                3.  Display existing account credentials
-                          ")
-                          number = input()
-                          if number =="1"
+                          ''')
+                        number = input()
+                        if number =="1":
                              '''
                              Create your own account using your own password
                              '''
@@ -116,7 +114,7 @@ def main():
                              credential_password = input()
                              save_credential( create_credential(account,credential_username,credential_password))
                              print(f"Your {account} credentials have been successfully created!")
-                         elif number =="2":
+                        elif number =="2":
                              '''
                              Create account using generated password
                              '''
@@ -126,7 +124,22 @@ def main():
                              credential_username = input()
                              save_credential(create_credential(account, credential_username, (generating_password())))  
                              print(f"Your {account} credentials have been successfully created!")
-                        elif number =="3"
+                        elif number =="3":
+                            '''
+                            display existing details
+                            '''
+                            if display_credentials():
+                                print("List of existing credentials")
+                                for credentials in display_credentials():
+                                    print(f"Account-{account}")
+                                    print(f"Username- {credential.credential_username}") 
+                                    print(f"Password- {credential.credential_password}")  
+                            else:
+                                print("You have no saved credentials")
+
+if __name__ =='__main__':
+    main()
+
 
 
 
