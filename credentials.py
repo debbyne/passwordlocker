@@ -1,5 +1,3 @@
-from unicodedata import numeric
-import unittest
 from passwordlocker import User
 class  Credentials:
     '''

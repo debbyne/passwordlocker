@@ -16,7 +16,13 @@ Pyhthon
  # Clone
  Clone the file from https://github.com/debbyne/passwordlocker.git
  Then extract the files from the zip
- cd passwordlocker
+  # cd passwordlocker
+  # import
+  string
+  random
+  unittest
+  #run
+  python3.9 run.py
 
 # Contact
 You can contact me via email @ kinyadebbyne@gmail.com
