@@ -18,7 +18,7 @@ def check_existing_users(name):
     function that checks if a user account name already exists
     '''
 
-    return User.user_exist(name)
+    return User.user_exists(name)
 def display_user(cls):
     '''
     function that returns the user list
@@ -43,16 +43,16 @@ def save_credentials(credentials):
     function that addes a new credential to the credentials
     '''
     credentials.save_credentials()
-def delete_credential(Credential):
+def del_credential(name):
     '''
     function to delete a credential
     ''' 
-    Credential.delete_credential 
-def display_credentials(Credential):
+    return Credentials.delete_credential(name)
+def display_credential():
     ''' 
     function that displays existing credentials
     '''
-    return Credential.credentials_list
+    return Credentials.display_credentials()
 def main():
     '''
     function that controls the passwordlocker
@@ -78,18 +78,26 @@ def main():
                     1.Create your own password
                     2.Generate password
                     """ )
-                    number = input()
-                    if number =="1":
-                        print("Enter password...")
-                        passwrd = input()   
-                    elif number == "2":
-                        print("(Generate password...")
-                        length = int(input("\nEnter the length of your desired password: "))
-                        lower = string.ascii_lowercase
-                        num = string.digits
-                        all = lower + num
+                    
+                    def gen_password():
+                        number = input()
+                        if number =="1":
+                            print("Enter password...")
+                            passwrd = input()   
+                        elif number == "2":
+                            print("(Generate password...")
+                            length = int(input("\nEnter the length of your desired password: "))
+                            lower = string.ascii_lowercase
+                            num = string.digits
+                            all = lower + num
 
+                            generate_password = random.sample(all, length)
 
+                            generated_password = "".join(generate_password)
+
+                            print("Your password has been auto-generated")
+                            print(generated_password)
+                    gen_password()
 
                 elif number == "2":
                     '''
@@ -110,6 +118,7 @@ def main():
                                1.Create a new credential
                                2.Use generated credential
                                3.Display existing account credentials
+                               4.Delete user account
                             ''')
                         number = input()
                         if number =="1":
@@ -138,14 +147,34 @@ def main():
                             '''
                             display existing details
                             '''
-                            if display_credentials():
+                            if display_credential():
                                 print("List of existing credentials")
-                                for credentials in display_credentials():
-                                    print(f"Account-{account}")
-                                    print(f"Username- {credential.credential_username}") 
-                                    print(f"Password- {credential.credential_password}")  
+                                for credentials in display_credential():
+                                    print(f"Account-{credentials.account}")
+                                    print(f"Username- {credentials.credentialsuser_name}") 
+                                    print(f"Password- {credentials.credentialspass_word}")  
+
+                                else:
+                                    print("Wrong input")
+                        
+                        elif number == "4":
+                            """
+                            Delete user 
+                            """
+                            print("Enter username for account to be deleted")
+                            deleting_credentils = input()
+                            if check_existing_users(deleting_credentils):
+                                del_credential(check_existing_users(deleting_credentils))
+                                print("Account Deleted successfully")
+
                             else:
-                                print("You have no saved credentials")
+                                print("Account does not exist")
+
+
+
+
+                        else:
+                            print("You have no saved credentials")
 
 if __name__ =='__main__':
     main()
