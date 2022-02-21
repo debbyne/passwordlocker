@@ -1,3 +1,5 @@
+import string
+import random
 from passwordlocker import User
 from credentials import Credentials
 def create_user_account(user_name , pass_word):
@@ -58,7 +60,7 @@ def main():
     print("WELCOME TO PASSWORD LOCKER.")
     
 
-    print(f"you have two options")
+    print("you have two options")
 
     while True:
                 print('''
@@ -78,9 +80,17 @@ def main():
                     """ )
                     number = input()
                     if number =="1":
-                        print("Enter password...")   
+                        print("Enter password...")
+                        passwrd = input()   
                     elif number == "2":
-                        print("(Generate password...())")
+                        print("(Generate password...")
+                        length = int(input("\nEnter the length of your desired password: "))
+                        lower = string.ascii_lowercase
+                        num = string.digits
+                        all = lower + num
+
+
+
                 elif number == "2":
                     '''
                     user logs in to existing account
@@ -99,8 +109,8 @@ def main():
                         print('''
                                1.Create a new credential
                                2.Use generated credential
-                               3.  Display existing account credentials
-                          ''')
+                               3.Display existing account credentials
+                            ''')
                         number = input()
                         if number =="1":
                              '''
