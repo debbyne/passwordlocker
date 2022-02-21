@@ -16,7 +16,7 @@ Pyhthon
  # Clone
  Clone the file from https://github.com/debbyne/passwordlocker.git
  Then extract the files from the zip
- cd Documents,python,passwordlocker
+ cd passwordlocker
 
 # Contact
 You can contact me via email @ kinyadebbyne@gmail.com
