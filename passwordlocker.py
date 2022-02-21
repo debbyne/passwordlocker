@@ -1,5 +1,5 @@
-# import unittest
-# from credentials import Credentials
+import unittest
+from credentials import Credentials
 
 
 class User:

@@ -12,7 +12,7 @@ class TestCredentials(unittest.TestCase):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_credentials = credentials("Instagram" "Devian","1234")
+        self.new_credentials = Credentials("Instagram" "Devian","1234")
     def tearDown(self):
         '''
         tearDown cleans up after each test case is run

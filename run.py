@@ -51,35 +51,9 @@ def display_credentials(Credential):
     function that displays existing credentials
     '''
     return Credential.credentials_list
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def main():
     '''
-    method that controls the passwordlocker
+    function that controls the passwordlocker
     '''
     print("WELCOME TO PASSWORD LOCKER.")
     
@@ -87,25 +61,73 @@ def main():
     print(f"you have two options")
 
     while True:
-                print( 
+                print(
+                    '''
                 1.Create a new account
                 2.Login to your existing account
-                 )
+                ''' )
                 number = input()
                 if number == "1":
                     '''
                     Create a new account
                     '''
-                    print("Enter username...")
+                    print("Enter username of choice...")
                     user_name = input()
                     print(
+                        '''
                     1.Create your own password
                     2.Generate password
-                    )
+                    ''' )
                     number = input()
                     if number =="1":
                         print("Enter password...")   
                     elif number == "2":
+                        print("(Generate password...())")
+                elif number == "2":
+                    '''
+                    user logs in to existing account
+                    '''
+                    print("Enter username...")
+                    username = input()
+                    print('\n')
+                    print("Enter password")
+                    password = input()
+                    print('\n')
+                    print("Welcome to your password locker account ")
+                    while True:
+                        '''
+                        After logging in
+                        '''
+                        print("
+                               1.Create a new credential
+                               2.Use generated credential
+                               3.  Display existing account credentials
+                          ")
+                          number = input()
+                          if number =="1"
+                             '''
+                             Create your own account using your own password
+                             '''
+                             print("Enter account name:...")
+                             account = input()
+                             print("Enter the username:...")
+                             credential_username = input()
+                             print("Enter the password:...")
+                             credential_password = input()
+                             save_credential( create_credential(account,credential_username,credential_password))
+                             print(f"Your {account} credentials have been successfully created!")
+                         elif number =="2":
+                             '''
+                             Create account using generated password
+                             '''
+                             print("Enter account name:...")
+                             account = input()
+                             print("Enter the username:...")
+                             credential_username = input()
+                             save_credential(create_credential(account, credential_username, (generating_password())))  
+                             print(f"Your {account} credentials have been successfully created!")
+                        elif number =="3"
+
 
 
 

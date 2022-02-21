@@ -1,3 +1,4 @@
+from unicodedata import numeric
 import unittest
 from passwordlocker import User
 class  Credentials:
@@ -42,6 +43,7 @@ class  Credentials:
        method that generates password
        '''
        length = 4
+       numeric
        return pass_word
        print(pass_word)
     @classmethod
