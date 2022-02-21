@@ -1,4 +1,4 @@
-import unittest
+
 
 
 class User:
@@ -32,7 +32,7 @@ class User:
     @classmethod
     def user_exists(cls, name):
         for user in cls.user_list:
-            if User.user_name ==name:
+            if user.user_name == name:
                 return True
         return False
     @classmethod
@@ -41,6 +41,6 @@ class User:
         method that returns the user list
         '''
         return cls.user_list
-if __name__ =='__main__':
-    unittest.main()
+# if __name__ =='__main__':
+#     unittest.main()
 

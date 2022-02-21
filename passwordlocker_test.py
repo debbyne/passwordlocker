@@ -43,7 +43,6 @@ class TestUser(unittest.TestCase):
         test_user = User("Devian"," 1234")
         test_user.save_user()
         user_exists = User.user_exists("Devian")
-
         self.assertTrue(user_exists)
 
 if __name__ =='__main__':
