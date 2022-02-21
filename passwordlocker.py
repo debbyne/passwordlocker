@@ -1,5 +1,5 @@
-import unittest
-from credentials import Credentials
+# import unittest
+# from credentials import Credentials
 
 
 class User:
@@ -7,7 +7,7 @@ class User:
     Class that creates the password locker account
     """
     user_list = []
-    def __init__(self,user_name,pass_word):
+    def __init__(self,user_name,pass_word,):
         '''
            __init__ method that helps us define properties for our object.
            user_name :name of user
@@ -31,10 +31,11 @@ class User:
 
 
     @classmethod
-    def user_exist(cls,name):
+    def user_exists(cls,name):
         for user in cls.user_list:
             if User.user_name ==name:
                 return True
+        return False
     @classmethod
     def display_user(cls):
         '''

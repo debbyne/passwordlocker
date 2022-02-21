@@ -1,5 +1,40 @@
 from passwordlocker import User
 from credentials import Credentials
+def create_user_account(user_name , pass_word):
+    '''
+    function to create a user account
+    '''
+    new_user = User(user_name ,pass_word)
+    return new_user
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def main():
     '''
     method that controls the passwordlocker
