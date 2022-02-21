@@ -37,15 +37,15 @@ class  Credentials:
         ''' 
         # for account in cls.accounts:
         return cls.credentials_list
-    @classmethod
-    def generate_pass_word(cls):
-       '''
-       method that generates password
-       '''
-       length = 4
-       numeric
-       return pass_word
-       print(pass_word)
+    # @classmethod
+    # def generate_pass_word(cls):
+    #    '''
+    #    method that generates password
+    #    '''
+    #    length = 4
+    #    numeric
+    #    return pass_word
+    #    print(pass_word)
     @classmethod
     def log_in(cls,name,password):
         '''

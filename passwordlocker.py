@@ -41,6 +41,17 @@ class User:
         method that returns the user list
         '''
         return cls.user_list
+
+
+    @classmethod
+    def find_user_by_name(cls, username):
+        '''
+        method that finds user by user name
+        '''  
+        for user in cls.user_list:
+            if user.user_name == username:
+                return user
+
 # if __name__ =='__main__':
 #     unittest.main()
 

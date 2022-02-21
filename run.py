@@ -84,6 +84,7 @@ def main():
                         if number =="1":
                             print("Enter password...")
                             passwrd = input()   
+                            return passwrd
                         elif number == "2":
                             print("(Generate password...")
                             length = int(input("\nEnter the length of your desired password: "))
@@ -97,6 +98,8 @@ def main():
 
                             print("Your password has been auto-generated")
                             print(generated_password)
+
+                            return generated_password
                     gen_password()
 
                 elif number == "2":
@@ -131,7 +134,7 @@ def main():
                              credential_username = input()
                              print("Enter the password:...")
                              credential_password = input()
-                             save_credential( create_credential(account,credential_username,credential_password))
+                             save_credentials( create_credentials(account,credential_username,credential_password))
                              print(f"Your {account} credentials have been successfully created!")
                         elif number =="2":
                              '''
@@ -141,7 +144,8 @@ def main():
                              account = input()
                              print("Enter the username:...")
                              credential_username = input()
-                             save_credential(create_credential(account, credential_username, (generating_password())))  
+                             login_password = gen_password()
+                             save_credentials(create_credentials(account, credential_username, (login_password)))  
                              print(f"Your {account} credentials have been successfully created!")
                         elif number =="3":
                             '''
