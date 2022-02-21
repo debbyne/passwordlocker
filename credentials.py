@@ -10,7 +10,7 @@ class  Credentials:
         '''
         method that helps define properties for our object self
         '''
-        self= account
+        self.account = account
         self.credentialsuser_name = credentialsuser_name
         self.credentialspass_word = credentialspass_word
 
@@ -31,12 +31,12 @@ class  Credentials:
         '''
         Credentials.credentials.remove(self)
     @classmethod 
-    def display_credentials(cls,name):  
+    def display_credentials(cls):  
         '''
         this method returns list of credentials
         ''' 
-        for account in cls.accounts:
-            return cls.credentials_list
+        # for account in cls.accounts:
+        return cls.credentials_list
     @classmethod
     def generate_pass_word(cls):
        '''

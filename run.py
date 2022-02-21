@@ -12,7 +12,7 @@ def save_users(user):
     '''
     function thats saves a new user account
     '''    
-    User.save_user()
+    return User.save_user()
 def check_existing_users(name):
     '''
     function that checks if a user account name already exists
@@ -42,13 +42,13 @@ def save_credentials(credentials):
     '''
     function that addes a new credential to the credentials
     '''
-    credentials.save_credentials()
+    return Credentials.save_credentials()
 def del_credential(name):
     '''
     function to delete a credential
     ''' 
     return Credentials.delete_credential(name)
-def display_credential():
+def display_credentials():
     ''' 
     function that displays existing credentials
     '''
@@ -147,9 +147,9 @@ def main():
                             '''
                             display existing details
                             '''
-                            if display_credential():
+                            if display_credentials():
                                 print("List of existing credentials")
-                                for credentials in display_credential():
+                                for credentials in display_credentials():
                                     print(f"Account-{credentials.account}")
                                     print(f"Username- {credentials.credentialsuser_name}") 
                                     print(f"Password- {credentials.credentialspass_word}")  

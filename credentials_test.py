@@ -41,3 +41,6 @@ class TestCredentials(unittest.TestCase):
         found_credentials = User.log_in("Devian",)
 
         self.assertEqual(found_credentials, Credentials.credentials_list) 
+
+if __name__ == '__main__':
+    unittest.main()
